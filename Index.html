@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Portfolio</h1>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="about-display">This is where you can introduce yourself and provide some background information about yourself.</p>
+                    <textarea id="about-edit" class="hidden"></textarea>
+                    <button id="edit-about-btn">Edit</button>
+                    <button id="save-about-btn" class="hidden">Save</button>
+                </div>
+                <div class="photo-upload">
+                    <div class="photo-box">
+                        <img src="#" alt="Student Photo" id="student-photo">
+                    </div>
+                    <label for="photo-input" class="browse-btn"></label>
+                    <input type="file" id="photo-input" accept="image/*">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Excellence Board Section -->
+    <section id="excellence-board">
+        <h2>Excellence Board</h2>
+        <form id="education-form">
+            <label for="certificate"> Certificate:</label><br>
+            <input type="file" id="certificate" name="certificate" accept="image/*"><br>
+            <div id="certificate-preview" class="image-preview"></div>
+
+            <label for="achievement-image">Achievement Image:</label><br>
+            <input type="file" id="achievement-image" name="achievement-image" accept="image/*"><br>
+            <div id="achievement-image-preview" class="image-preview"></div>
+        </form>
+    </section>
+    
+    <!-- Artworks Section -->
+    <section id="artworks">
+        <h2>Artworks</h2>
+        <form id="artwork-form">
+            <label for="artwork-image">Artwork:</label><br>
+            <input type="file" id="artwork-image" name="artwork-image" accept="image/*"><br>
+            <label for="artwork-description">Artwork Description:</label><br>
+            <textarea id="artwork-description" name="artwork-description" rows="4"></textarea><br>
+            <button type="button" onclick="addArtwork()">Add Artwork</button>
+        </form>
+        <div id="artwork-gallery" class="artwork-gallery"></div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <form id="project-form">
+            <label for="project-title">Project Title:</label><br>
+            <input type="text" id="project-title" name="project-title"><br>
+            <label for="project-description">Project Description:</label><br>
+            <textarea id="project-description" name="project-description" rows="4"></textarea><br>
+            <label for="project-image"> Project Image:</label><br>
+            <input type="file" id="project-image" name="project-image" accept="image/*"><br>
+            <button type="button" onclick="addProject()">Add Project</button>
+        </form>
+        <div id="project-gallery" class="project-gallery"></div>
+    </section>
+    
+    <!-- AwesoME Section -->
+    <section id="awesome">
+        <h2>AwesoME</h2>
+        <form id="awesome-form">
+            <label for="unique-ability">Unique Ability:</label><br>
+            <textarea id="unique-ability" name="unique-ability" rows="4"></textarea><br>
+            <button type="button" onclick="addAbility()">Add Ability</button>
+        </form>
+        <div id="awesome-gallery" class="awesome-gallery"></div>
+    </section>
+    
+    <!-- Save Portfolio Button -->
+    <button id="savePortfolioBtn">Save Portfolio</button>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
